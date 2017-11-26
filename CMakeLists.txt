@@ -4,7 +4,7 @@ project(CPP_Training)
 set(CMAKE_CXX_STANDARD 11)
 set(Boost_USE_MULTITHREAD ON)
 set(Boost_ADDITIONAL_VERSIONS "1.65" "1.65.0")
-find_package(Boost COMPONENTS system filesystem REQUIRED)
+find_package(Boost COMPONENTS system filesystem program_options REQUIRED)
 
 add_executable(CPP_Training main.cpp)
 
