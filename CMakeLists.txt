@@ -12,3 +12,5 @@ if (Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIR})
     target_link_libraries(CPP_Training ${Boost_LIBRARIES})
 endif()
+
+
