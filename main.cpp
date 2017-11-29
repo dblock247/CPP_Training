@@ -102,8 +102,7 @@ int main(int argc, char *argv[])
 //        remove(txtFile);
     };
 
-    cout << txtFile << endl;
-
-    getchar();
+int main() {
+    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
