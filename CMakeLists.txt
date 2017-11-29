@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(Boost_USE_MULTITHREAD ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY build)
 
-find_package(Boost COMPONENTS system filesystem REQUIRED)
+find_package(Boost COMPONENTS system filesystem program_options REQUIRED)
 add_executable(CPP_Training main.cpp)
 
 if (Boost_FOUND)
