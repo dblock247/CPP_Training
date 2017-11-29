@@ -9,7 +9,6 @@ find_package(Boost COMPONENTS system filesystem program_options REQUIRED)
 add_executable(CPP_Training main.cpp)
 
 if (Boost_FOUND)
-    message(${Boost_INCLUDE_DIR})
     include_directories(${Boost_INCLUDE_DIR})
     target_link_libraries(CPP_Training ${Boost_LIBRARIES})
 endif()
