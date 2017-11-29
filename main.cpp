@@ -61,8 +61,7 @@ void dir_nav(path &dir)
     }
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     // Fundamentals
     cout << "-------- Fundamentals --------" << endl;
     check_path("foo");
@@ -71,18 +70,15 @@ int main(int argc, char *argv[])
     auto dir = path(argv[0]).parent_path();
     check_path(dir.string().c_str());
 
-    for (auto &child : dir)
-    {
+    for (auto &child : dir) {
         cout << child << endl;
     }
 
-    try
-    {
+    try {
         path p("junk");
         cout << file_size(p) << endl;
     }
-    catch (const filesystem_error &e)
-    {
+    catch (const filesystem_error &e) {
         cout << e.what() << endl;
     }
 
@@ -96,13 +92,8 @@ int main(int argc, char *argv[])
     dir_nav(parent);
 
     auto txtFile = path(argv[0]).parent_path() / "text.txt";
-    if (is_regular_file(txtFile))
-    {
+    if (is_regular_file(txtFile)) {
         cout << txtFile << " is a regular file" << endl;
 //        remove(txtFile);
-    };
-
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    }
 }
