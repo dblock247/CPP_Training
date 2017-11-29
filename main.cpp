@@ -1,11 +1,24 @@
 #include <iostream>
-#include <boost/filesystem.hpp>
+#include <boost/any.hpp>
+#include <string>
+#include <vector>
 
 using namespace std;
 using namespace boost;
-using namespace boost::filesystem;
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+int main()
+{
+    any w;
+    any x { 2.0 };
+    vector<any> y { 42, "life" };
+    any z = string("test");
+
+    if (!x.empty())
+        cout << x.type().name() << endl;
+
+    auto a = any_cast<int>(y[0]);
+    cout << "The value is " << a << endl;
+
+    getchar();
     return 0;
 }
